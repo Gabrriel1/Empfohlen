@@ -1,550 +1,421 @@
 
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090b1e">
-
-<title>$10 Willkommensbonus | Empfohlen</title>
-
-<meta name="description" content="Sichere dir deinen $10 Willkommensbonus und verdiene Geld mit Spielen und App-Tests.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09091b">
+<title>Empfohlen | $10 Welcome Bonus</title>
 
 <style>
-
-/* ===== GLOBAL ===== */
-
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --bg: #080a1b;
-  --card: #171935;
-  --red: #f23b42;
-  --text: #f7f7ff;
-  --muted: #aab4da;
-  --green: #57ef83;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Arial, sans-serif;
-  background:
-    radial-gradient(
-      ellipse at top,
-      #29172e 0%,
-      transparent 35%
-    ),
-    linear-gradient(180deg, #0c0d25, #050711);
-  color: var(--text);
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  background: radial-gradient(
+    ellipse at 50% 0,
+    #25162d,
+    #09091b 55%,
+    #060711
+  );
+  color: #fff;
+  font: 14px Arial, sans-serif;
 }
 
 .page {
-  max-width: 520px;
+  max-width: 390px;
   margin: auto;
-  padding: 14px 13px 35px;
+  padding: 10px 13px 28px;
 }
 
-/* ===== HERO ===== */
-
 .hero {
-  background:
-    radial-gradient(
-      circle at 95% 5%,
-      #38203d,
-      transparent 45%
-    ),
-    linear-gradient(145deg, #19162f, #0c102b 70%);
-  border: 1px solid #4a2b4b;
-  border-radius: 25px;
-  padding: 23px 17px 20px;
-  box-shadow: 0 15px 45px #0007;
+  position: relative;
+  padding: 15px 13px 13px;
+  background: linear-gradient(
+    130deg,
+    #1b152d,
+    #0e102b 65%
+  );
+  border: 1px solid #49304d;
+  border-radius: 20px;
   overflow: hidden;
 }
 
-.bonus-badge {
-  display: table;
-  margin: 0 auto 23px;
-  border: 1px solid #f34561;
-  background: #f23b4214;
-  color: #ff6677;
-  padding: 10px 17px;
-  border-radius: 50px;
-  font-size: 13px;
+.badge {
+  display: inline-block;
+  border: 1px solid #9d3850;
+  border-radius: 30px;
+  padding: 6px 12px;
+  color: #ff6575;
   font-weight: 900;
-  letter-spacing: .04em;
-  box-shadow: 0 0 20px #f23b4215;
+  font-size: 10px;
+  background: #341c33;
+  margin-bottom: 12px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  gap: 2px;
 }
 
 .headline {
-  text-align: center;
-  font-size: clamp(30px, 8vw, 43px);
-  line-height: 1.08;
-  letter-spacing: -.045em;
+  font-size: 23px;
+  line-height: 1.07;
+  letter-spacing: -.9px;
+  margin: 0;
   font-weight: 900;
 }
 
-.headline .red {
-  color: #ff4752;
+.red {
+  color: #ff5055;
 }
 
-.headline .underlined {
-  text-decoration: underline;
-  text-decoration-color: #f23b42;
-  text-underline-offset: 7px;
-  text-decoration-thickness: 3px;
-}
+/* 3D GIFT */
 
-/* ===== 3D GIFT ===== */
-
-.gift-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 225px;
-  margin: 12px auto 22px;
-  perspective: 700px;
-}
-
-.gift-3d {
+.gift {
+  width: 118px;
+  height: 130px;
   position: relative;
-  width: 270px;
-  height: 210px;
-  flex-shrink: 0;
   filter: drop-shadow(
-    0 18px 20px rgba(0,0,0,.35)
+    0 8px 14px #ff4e3038
   );
 }
 
-.gift-box {
+.boxbody {
   position: absolute;
-  left: 32px;
-  top: 45px;
-  width: 165px;
-  height: 145px;
-  transform: rotate(-7deg);
-}
-
-.gift-body {
-  position: absolute;
-  left: 8px;
-  top: 42px;
-  width: 149px;
-  height: 100px;
-  border-radius: 7px 7px 18px 18px;
+  top: 57px;
+  left: 11px;
+  width: 100px;
+  height: 68px;
   background: linear-gradient(
-    115deg,
-    #a90c1b 0%,
-    #fa4143 24%,
-    #e51c2c 62%,
-    #8c0719 100%
+    105deg,
+    #a81522,
+    #ff4e40 40%,
+    #9f0c20
   );
-  border: 2px solid #ff5c57;
+  border-radius: 7px 7px 12px 12px;
   box-shadow:
-    inset 8px 0 12px rgba(255,255,255,.15),
-    inset -13px -8px 20px rgba(50,0,0,.45),
-    7px 13px 20px rgba(0,0,0,.45);
+    inset -9px -5px 12px #48031366;
 }
 
-.gift-ribbon {
+.boxlid {
   position: absolute;
-  width: 32px;
-  height: 100%;
-  left: 57px;
-  top: 0;
+  top: 43px;
+  left: 6px;
+  width: 110px;
+  height: 25px;
+  background: linear-gradient(
+    #ff6c4b,
+    #bc1628
+  );
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.ribbon {
+  position: absolute;
+  top: 43px;
+  left: 49px;
+  width: 22px;
+  height: 82px;
   background: linear-gradient(
     90deg,
-    #bd710c,
-    #ffe67a 30%,
-    #ffba27 65%,
-    #a65b00
+    #a8610a,
+    #ffe578 40%,
+    #d48a0b
   );
-  box-shadow:
-    inset 3px 0 5px #fff5a055,
-    3px 0 7px #0003;
-}
-
-.gift-lid {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  width: 165px;
-  height: 42px;
-  border-radius: 10px;
-  background: linear-gradient(
-    110deg,
-    #b9091b,
-    #ff5652 28%,
-    #ed2732 65%,
-    #970b1b
-  );
-  border: 2px solid #ff6961;
-  box-shadow:
-    inset 0 5px 7px #ffffff35,
-    0 8px 10px #55000b70;
   z-index: 3;
 }
 
-.lid-ribbon {
+.bow {
   position: absolute;
-  left: 65px;
-  top: 0;
-  width: 32px;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    #b96b09,
-    #ffe680 40%,
-    #f7a81a 80%,
-    #a65c00
-  );
+  top: 20px;
+  left: 39px;
+  width: 43px;
+  height: 32px;
+  z-index: 4;
 }
 
-.gift-bow {
+.bow:before,
+.bow:after {
+  content: "";
   position: absolute;
-  top: -15px;
-  left: 52px;
-  width: 75px;
-  height: 55px;
+  width: 33px;
+  height: 23px;
+  border: 6px solid #ffc34a;
+  border-radius: 70% 30% 70% 30%;
+  background: #ffdc62;
+  box-shadow: 0 3px 8px #0005;
+}
+
+.bow:before {
+  left: -18px;
+  transform: rotate(28deg);
+}
+
+.bow:after {
+  right: -18px;
+  transform: rotate(62deg);
+}
+
+.bowcenter {
+  position: absolute;
+  top: 30px;
+  left: 54px;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(
+    #fff49c,
+    #ed9d15
+  );
+  border-radius: 5px;
   z-index: 5;
 }
 
-.bow-left,
-.bow-right {
+.giftlabel {
   position: absolute;
-  width: 53px;
-  height: 35px;
-  border: 8px solid #ffbd2f;
-  border-radius: 75% 20% 75% 20%;
+  right: -8px;
+  bottom: 0;
   background: linear-gradient(
     135deg,
-    #ffed8b,
-    #e28a00
+    #fff0aa,
+    #ffb93d
   );
-  box-shadow:
-    inset 0 2px 5px #fff7ae,
-    2px 5px 8px #6b330080;
-}
-
-.bow-left {
-  left: -20px;
-  top: 7px;
-  transform: rotate(35deg);
-}
-
-.bow-right {
-  right: -20px;
-  top: 7px;
-  transform: rotate(55deg) scaleX(-1);
-}
-
-.bow-center {
-  position: absolute;
-  left: 26px;
-  top: 22px;
-  width: 25px;
-  height: 25px;
-  border-radius: 8px;
-  background: linear-gradient(
-    135deg,
-    #fff29c,
-    #f6a91e,
-    #b96700
-  );
-  box-shadow: 0 3px 6px #5d290070;
-  z-index: 6;
-}
-
-/* BONUS LABEL */
-
-.gift-bonus-label {
-  position: absolute;
-  left: 135px;
-  top: 95px;
-  width: 128px;
-  min-height: 92px;
-  background: linear-gradient(
-    140deg,
-    #fff0a6,
-    #ffc44f 60%,
-    #eaa12b
-  );
-  border: 2px solid #fff3ba;
-  border-radius: 15px;
-  transform: rotate(-11deg);
-  box-shadow:
-    0 10px 20px #0008,
-    inset 0 2px 6px #fff8d0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 8;
-  text-align: center;
-}
-
-.gift-bonus-amount {
-  font-size: 35px;
-  font-weight: 1000;
-  color: #52200c;
-  line-height: 1;
-  letter-spacing: -2px;
-}
-
-.gift-bonus-text {
-  font-size: 13px;
-  font-weight: 1000;
-  color: #51200a;
-  line-height: 1.05;
-  margin-top: 5px;
-}
-
-/* SPARKS */
-
-.gift-spark {
-  position: absolute;
-  width: 7px;
-  height: 25px;
+  color: #51240a;
+  border: 2px solid #fff0b3;
   border-radius: 10px;
-  background: linear-gradient(
-    #fff49a,
-    #ffae19
-  );
-  box-shadow: 0 0 12px #ffae1980;
+  padding: 8px 5px;
+  text-align: center;
+  width: 74px;
+  transform: rotate(-10deg);
+  box-shadow: 0 6px 12px #0008;
+  z-index: 6;
+  font-weight: 900;
 }
 
-.spark-1 {
-  left: 20px;
-  top: 40px;
+.giftlabel b {
+  display: block;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.giftlabel small {
+  display: block;
+  font-size: 9px;
+  line-height: 1.1;
+  margin-top: 3px;
+}
+
+.spark {
+  position: absolute;
+  width: 3px;
+  height: 14px;
+  background: #ffcf57;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ffc94c;
+}
+
+.spark.one {
+  top: 27px;
+  left: 3px;
   transform: rotate(-40deg);
 }
 
-.spark-2 {
-  right: 10px;
-  top: 75px;
-  transform: rotate(45deg);
+.spark.two {
+  top: 18px;
+  right: 7px;
+  transform: rotate(38deg);
 }
 
-.spark-3 {
-  right: 0;
-  top: 115px;
-  transform: rotate(80deg);
+.spark.three {
+  bottom: 19px;
+  right: -8px;
+  transform: rotate(65deg);
 }
 
-/* ===== SUBTEXT ===== */
+/* HERO TEXT */
 
-.subtext {
-  font-size: 15px;
-  line-height: 1.65;
-  text-align: center;
-  color: #c5cbed;
-  margin: 12px auto 17px;
+.desc {
+  color: #b8c4e9;
+  font-size: 11px;
+  line-height: 1.45;
+  margin: 9px 0;
 }
 
 .trust {
-  color: #b8c6ff;
-  font-size: 13px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.trust strong {
-  color: white;
-}
-
-.trust .check {
-  color: #73c7ff;
-  font-size: 18px;
-  margin-right: 5px;
-}
-
-/* ===== BENEFITS ===== */
-
-.proof-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.proof {
-  background: linear-gradient(
-    150deg,
-    #242441,
-    #15172f
-  );
-  border: 1px solid #383958;
-  border-radius: 16px;
-  text-align: center;
-  padding: 13px 5px;
-  min-width: 0;
-}
-
-.proof .emoji {
-  font-size: 19px;
-  display: block;
-  margin-bottom: 7px;
-}
-
-.proof strong {
-  display: block;
-  color: white;
-  font-size: 15px;
-  font-weight: 900;
-  margin-bottom: 5px;
-}
-
-.proof span {
-  display: block;
+  color: #c5d1ff;
   font-size: 10px;
-  color: #b7c1e8;
-  line-height: 1.4;
+  margin: 9px 0 12px;
 }
 
-/* ===== CTA ===== */
+.trust b {
+  color: white;
+}
+
+.check {
+  color: #73b7ff;
+  font-size: 15px;
+  margin-right: 4px;
+}
+
+/* BENEFITS */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 6px;
+  margin-bottom: 13px;
+}
+
+.benefit {
+  min-width: 0;
+  text-align: center;
+  padding: 9px 3px;
+  border: 1px solid #343453;
+  border-radius: 11px;
+  background: #1c1c38;
+}
+
+.benefit .emoji {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.benefit strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.benefit small {
+  display: block;
+  color: #a9b6e7;
+  font-size: 8px;
+  line-height: 1.3;
+}
+
+/* SINGLE RED BUTTON */
 
 .cta {
   display: block;
+  text-align: center;
+  color: white;
   text-decoration: none;
   background: linear-gradient(
     180deg,
-    #ff4847,
-    #c8201e
+    #f45a47,
+    #b92b20
   );
-  border: 1px solid #ff6260;
-  border-radius: 17px;
-  padding: 18px 10px;
-  text-align: center;
-  color: white;
-  box-shadow: 0 10px 30px #ef303b45;
-  transition:
-    transform .2s,
-    filter .2s;
+  border-radius: 12px;
+  padding: 14px 7px;
+  box-shadow: 0 8px 20px #ee372f35;
+  border: 1px solid #f46b57;
+  transition: transform .2s;
 }
 
 .cta:hover {
   transform: translateY(-2px);
-  filter: brightness(1.1);
 }
 
-.cta:active {
-  transform: scale(.98);
-}
-
-.cta-title {
-  font-size: clamp(15px, 4vw, 20px);
-  font-weight: 900;
-  line-height: 1.25;
-}
-
-.cta-small {
+.cta strong {
   display: block;
-  font-size: 11px;
-  margin-top: 5px;
-  color: #ffe4e4;
-  font-weight: 600;
+  font-size: 14px;
 }
 
-.cta-note {
+.cta small {
+  display: block;
+  color: #ffe2db;
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.note {
   text-align: center;
-  font-size: 11px;
-  color: #b6bdd8;
-  margin: 13px auto 18px;
+  color: #aeb7d4;
+  font-size: 9px;
+  margin: 10px 0;
+}
+
+.payment {
+  border: 1px solid #74304c;
+  border-radius: 11px;
+  padding: 11px;
+  background: #1a1327;
+  color: #e7e1ee;
+  font-size: 10px;
   line-height: 1.5;
 }
 
-/* ===== PAYMENT ===== */
-
-.payment {
-  border: 1px solid #80304c;
-  border-radius: 16px;
-  padding: 14px;
-  background: linear-gradient(
-    135deg,
-    #241528,
-    #15132a
-  );
-  font-size: 12px;
-  line-height: 1.6;
-  color: #e0d8e8;
-}
-
-.payment strong {
+.payment b {
   color: white;
 }
 
-.payment .highlight {
-  color: #ff6878;
-  font-weight: 900;
+.payment em {
+  color: #ff6570;
+  font-style: normal;
+  font-weight: bold;
 }
 
-/* ===== SECTION TITLES ===== */
+/* SECTION HEADERS */
 
 .section-title {
-  text-align: center;
-  color: #8998cd;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .13em;
-  margin: 28px 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
+  margin: 18px 0 12px;
+  text-align: center;
+  color: #8b9ed7;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
-.section-title::before,
-.section-title::after {
+.section-title:before,
+.section-title:after {
   content: "";
+  width: 28px;
   height: 1px;
-  flex: 1;
-  max-width: 45px;
-  background: #48517c;
+  background: #4c5484;
 }
 
-/* ===== GAME OFFERS ===== */
+/* GAMES */
 
 .offer {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
+  padding: 10px;
+  margin-bottom: 9px;
+  border: 1px solid #56d94e;
+  border-radius: 13px;
   background: linear-gradient(
-    120deg,
-    #111a29,
-    #09231c
+    110deg,
+    #101827,
+    #0b241b
   );
-  border: 1.5px solid #59e766;
-  border-radius: 18px;
-  padding: 14px 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 0 20px #3bf56a12;
+  box-shadow: 0 0 12px #38e05a12;
 }
 
 .game-icon {
-  width: 54px;
-  height: 54px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  background: #26294c;
+  width: 39px;
+  height: 39px;
+  border-radius: 8px;
   overflow: hidden;
+  background: #242a45;
+  flex-shrink: 0;
 }
 
 .game-icon img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  display: block;
 }
 
 .game-info {
@@ -553,71 +424,56 @@ body {
 }
 
 .game-name {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 900;
-  color: white;
 }
 
 .hot {
-  background: linear-gradient(
-    90deg,
-    #ff5000,
-    #ff9200
-  );
-  padding: 3px 6px;
-  border-radius: 5px;
-  font-size: 9px;
-  margin-left: 4px;
-  vertical-align: middle;
+  background: #ff8300;
+  color: white;
+  font-size: 8px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-left: 3px;
 }
 
 .game-desc {
-  font-size: 11px;
-  color: #abb8e6;
-  margin-top: 6px;
-  line-height: 1.5;
-}
-
-.game-price {
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.game-price strong {
-  display: block;
-  font-size: 25px;
-  color: var(--green);
-  font-weight: 900;
-}
-
-.rating {
-  color: #ffd24f;
-  font-size: 11px;
+  color: #9fb2e5;
+  font-size: 9px;
   margin-top: 4px;
 }
 
-/* ===== STEPS ===== */
+.price {
+  color: #5df47c;
+  font-size: 20px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.rating {
+  color: #ffda44;
+  font-size: 9px;
+  text-align: right;
+}
+
+/* STEPS */
 
 .steps {
-  background: linear-gradient(
-    150deg,
-    #191733,
-    #11132c
-  );
-  border: 1px solid #3a2952;
-  border-radius: 20px;
-  padding: 12px;
+  background: #17162f;
+  border: 1px solid #38294d;
+  border-radius: 14px;
+  padding: 8px;
 }
 
 .step {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: #1c1e3d;
-  border: 1px solid #303251;
-  border-radius: 14px;
-  padding: 12px;
-  margin-bottom: 9px;
+  gap: 10px;
+  padding: 9px;
+  margin-bottom: 7px;
+  background: #1e1e3d;
+  border: 1px solid #30304f;
+  border-radius: 10px;
 }
 
 .step:last-child {
@@ -625,138 +481,79 @@ body {
 }
 
 .number {
-  width: 39px;
-  height: 39px;
-  border-radius: 12px;
-  background: #3c203b;
-  color: #ff555d;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: #39213a;
+  color: #ff565e;
   display: grid;
   place-items: center;
-  font-size: 19px;
   font-weight: 900;
   flex-shrink: 0;
 }
 
-.step h3 {
-  font-size: 13px;
-  margin-bottom: 5px;
-  color: white;
-}
-
-.step p {
+.step strong {
+  display: block;
   font-size: 11px;
-  color: #aebae7;
-  line-height: 1.5;
 }
 
-/* ===== TESTIMONIAL ===== */
+.step small {
+  display: block;
+  color: #a9b5e2;
+  font-size: 9px;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+/* TESTIMONIAL */
 
 .testimonial {
-  background: linear-gradient(
-    130deg,
-    #191730,
-    #131730
-  );
-  border: 1px solid #68304e;
-  border-radius: 20px;
-  padding: 18px;
-  margin-top: 18px;
+  background: #181730;
+  border: 1px solid #4c2c4b;
+  border-radius: 13px;
+  padding: 12px;
+  margin-top: 14px;
 }
 
 .stars {
-  color: #ffd23c;
-  letter-spacing: 2px;
-  font-size: 19px;
-  margin-bottom: 10px;
+  color: #ffcf35;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .testimonial p {
-  font-size: 13px;
-  color: #e5e5f8;
-  line-height: 1.65;
-  margin-bottom: 12px;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 7px 0;
+  color: #e6e5f5;
 }
 
 .testimonial strong {
-  font-size: 12px;
+  font-size: 10px;
 }
 
-.bottom-cta {
-  margin-top: 22px;
-}
+/* RESPONSIVE */
 
-/* ===== FOOTER ===== */
-
-footer {
-  color: #737c9d;
-  text-align: center;
-  padding: 23px 10px;
-  font-size: 11px;
-  line-height: 1.7;
-}
-
-footer a {
-  color: #8e9ac2;
-  text-decoration: none;
-  margin: 0 7px;
-}
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 360px) {
-
-  .page {
-    padding-left: 9px;
-    padding-right: 9px;
-  }
-
-  .hero {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
+@media(max-width:360px) {
   .headline {
-    font-size: 29px;
-  }
-
-  .gift-area {
-    height: 195px;
-  }
-
-  .gift-3d {
-    transform: scale(.85);
-  }
-
-  .proof strong {
-    font-size: 12px;
-  }
-
-  .proof span {
-    font-size: 9px;
-  }
-
-  .game-icon {
-    width: 46px;
-    height: 46px;
-  }
-
-  .game-price strong {
     font-size: 21px;
   }
 
-  .offer {
-    gap: 8px;
-    padding: 11px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  .top {
+    grid-template-columns: 1fr 105px;
   }
 
-  .cta {
-    transition: none;
+  .gift {
+    transform: scale(.88);
+    transform-origin: left center;
+  }
+
+  .cta strong {
+    font-size: 12px;
+  }
+
+  .benefit strong {
+    font-size: 10px;
   }
 }
 
@@ -767,112 +564,96 @@ footer a {
 
 <main class="page">
 
-<!-- ===== HERO ===== -->
-
 <section class="hero">
 
-  <div class="bonus-badge">
-    🎁 $10 WILLKOMMENSBONUS
+  <!-- TOP BADGE -->
+
+  <div class="badge">
+    🎁 EMPFOHLEN
   </div>
 
-  <h1 class="headline">
-    Sichere dir deinen
-    <span class="red">$10</span>
-    <span class="underlined">
-      Willkommensbonus
-    </span>
-    &amp; verdiene Geld mit Apps und Spielen
-  </h1>
+  <!-- HEADLINE + GIFT -->
 
-  <!-- ===== 3D GIFT ===== -->
+  <div class="top">
 
-  <div class="gift-area">
+    <h1 class="headline">
+      Unlock a
+      <span class="red">$10</span>
+      Welcome Bonus &amp;
+      Earn Money Testing
+      Apps and Games
+    </h1>
 
-    <div class="gift-3d">
+    <div class="gift">
 
-      <div class="gift-spark spark-1"></div>
-      <div class="gift-spark spark-2"></div>
-      <div class="gift-spark spark-3"></div>
+      <div class="spark one"></div>
+      <div class="spark two"></div>
+      <div class="spark three"></div>
 
-      <div class="gift-box">
+      <div class="boxbody"></div>
+      <div class="boxlid"></div>
+      <div class="ribbon"></div>
 
-        <div class="gift-lid">
-          <div class="lid-ribbon"></div>
-        </div>
+      <div class="bow"></div>
+      <div class="bowcenter"></div>
 
-        <div class="gift-body">
-          <div class="gift-ribbon"></div>
-        </div>
-
-        <div class="gift-bow">
-          <div class="bow-left"></div>
-          <div class="bow-right"></div>
-          <div class="bow-center"></div>
-        </div>
-
-      </div>
-
-      <div class="gift-bonus-label">
-        <span class="gift-bonus-amount">
-          $10
-        </span>
-
-        <span class="gift-bonus-text">
-          WILLKOMMENS<br>
+      <div class="giftlabel">
+        <b>$10</b>
+        <small>
+          WELCOME<br>
           BONUS
-        </span>
+        </small>
       </div>
 
     </div>
 
   </div>
 
-  <!-- ===== DESCRIPTION ===== -->
+  <!-- DESCRIPTION -->
 
-  <p class="subtext">
-    Erledige <strong>2 kurze Aufgaben</strong>,
-    schalte deinen $10 Willkommensbonus frei
-    und erhalte Zugang zu bezahlten Spielen,
-    App-Tests und Scroll-Aufgaben.
+  <p class="desc">
+    Complete 2 quick steps to unlock your
+    $10 bonus and instantly get access
+    to paid games, app tests, and
+    scrolling tasks.
   </p>
 
   <div class="trust">
     <span class="check">✓</span>
-    Bereits über <strong>$50M+</strong>
-    an Nutzer ausgezahlt
+    Over <b>$50M+</b> already paid out to users
   </div>
 
-  <!-- ===== BENEFITS ===== -->
+  <!-- BENEFITS -->
 
-  <div class="proof-row">
+  <div class="benefits">
 
-    <div class="proof">
+    <div class="benefit">
       <span class="emoji">🎁</span>
       <strong>$10</strong>
-      <span>
-        Willkommensbonus für neue Konten
-      </span>
+      <small>
+        Welcome bonus for new accounts
+      </small>
     </div>
 
-    <div class="proof">
+    <div class="benefit">
       <span class="emoji">⚡</span>
-      <strong>2 Schritte</strong>
-      <span>
-        zum Freischalten
-      </span>
+      <strong>2 Steps</strong>
+      <small>
+        to unlock your account
+      </small>
     </div>
 
-    <div class="proof">
+    <div class="benefit">
       <span class="emoji">📱</span>
       <strong>iOS + Android</strong>
-      <span>
-        Für beide Geräte
-      </span>
+      <small>
+        Works on both devices
+      </small>
     </div>
 
   </div>
 
-  <!-- ===== MAIN CTA ===== -->
+  <!-- MAIN RED BUTTON -->
 
   <a
     class="cta affiliate-link"
@@ -881,46 +662,37 @@ footer a {
     rel="noopener noreferrer"
   >
 
-    <div class="cta-title">
-      🎁 $10 Willkommensbonus freischalten →
-    </div>
+    <strong>
+      🎁 Unlock Your $10 Welcome Bonus →
+    </strong>
 
-    <span class="cta-small">
-      Kostenlose Registrierung • iOS &amp; Android
-    </span>
+    <small>
+      Free registration • iOS &amp; Android
+    </small>
 
   </a>
 
-  <div class="cta-note">
-    🛡️ Nur für neue Konten.
-    Erledige 2 kurze Aufgaben,
-    um den $10 Bonus zu erhalten.
+  <div class="note">
+    ◈ New accounts only. Complete 2 short
+    tasks to receive the $10 bonus.
   </div>
 
-  <!-- ===== PAYMENT ===== -->
+  <!-- PAYMENT -->
 
   <div class="payment">
-
-    <strong>
-      Wie funktioniert die Bezahlung?
-    </strong>
-
-    <span class="highlight">
-      Empfohlen:
-    </span>
-
-    PayPal für Auszahlungen ab $70.
-    Verdiene Geld durch abgeschlossene
-    Aufgaben, App-Tests und Spiele.
-
+    <b>How does the payment work?</b>
+    <em>Empfohlen:</em>
+    PayPal for withdrawals from $70
+    after completing eligible tasks,
+    app tests, and games.
   </div>
 
 </section>
 
-<!-- ===== GAME OFFERS ===== -->
+<!-- GAME OFFERS -->
 
 <div class="section-title">
-  SPIELE, MIT DENEN DU VERDIENEN KANNST
+  GAMES YOU CAN EARN FROM
 </div>
 
 <!-- BLOCK BLAST -->
@@ -928,15 +700,11 @@ footer a {
 <div class="offer">
 
   <div class="game-icon">
-
     <img
       src="block-blast.webp"
       alt="Block Blast"
-      width="54"
-      height="54"
       loading="lazy"
     >
-
   </div>
 
   <div class="game-info">
@@ -947,16 +715,14 @@ footer a {
     </div>
 
     <div class="game-desc">
-      Teste das Spiel und erreiche Level 7
+      Test and reach level 7
     </div>
 
   </div>
 
-  <div class="game-price">
-    <strong>€106</strong>
-    <div class="rating">
-      ★ 5.0
-    </div>
+  <div>
+    <div class="price">€106</div>
+    <div class="rating">★ 5.0</div>
   </div>
 
 </div>
@@ -966,15 +732,11 @@ footer a {
 <div class="offer">
 
   <div class="game-icon">
-
     <img
       src="subway-surfers.webp"
       alt="Subway Surfers"
-      width="54"
-      height="54"
       loading="lazy"
     >
-
   </div>
 
   <div class="game-info">
@@ -984,21 +746,21 @@ footer a {
     </div>
 
     <div class="game-desc">
-      Teste das Spiel und erreiche Level 5
+      Test and reach level 5
     </div>
 
   </div>
 
-  <div class="game-price">
-    <strong>€20</strong>
+  <div class="price">
+    €20
   </div>
 
 </div>
 
-<!-- ===== HOW IT WORKS ===== -->
+<!-- HOW IT WORKS -->
 
 <div class="section-title">
-  IN 3 EINFACHEN SCHRITTEN STARTEN
+  START IN 3 EASY STEPS
 </div>
 
 <div class="steps">
@@ -1008,11 +770,13 @@ footer a {
     <div class="number">1</div>
 
     <div>
-      <h3>Willkommensbonus freischalten</h3>
-      <p>
-        Erstelle über diese Seite
-        ein neues Empfohlen-Konto.
-      </p>
+      <strong>
+        Unlock Your Welcome Bonus
+      </strong>
+      <small>
+        Create a new Referred Account
+        through this page.
+      </small>
     </div>
 
   </div>
@@ -1022,12 +786,13 @@ footer a {
     <div class="number">2</div>
 
     <div>
-      <h3>2 kurze Aufgaben erledigen</h3>
-      <p>
-        Schließe die ersten einfachen
-        Aktionen ab, um deine Angebote
-        freizuschalten.
-      </p>
+      <strong>
+        Complete 2 Short Tasks
+      </strong>
+      <small>
+        Finish the first simple actions
+        to unlock your trial offers.
+      </small>
     </div>
 
   </div>
@@ -1037,18 +802,20 @@ footer a {
     <div class="number">3</div>
 
     <div>
-      <h3>Spielen &amp; Geld verdienen</h3>
-      <p>
-        Starte mit Spielen, App-Tests
-        und weiteren bezahlten Aufgaben.
-      </p>
+      <strong>
+        Start Playing &amp; Earning Rewards
+      </strong>
+      <small>
+        Then immediately start testing
+        apps, games, and other paid tasks.
+      </small>
     </div>
 
   </div>
 
 </div>
 
-<!-- ===== TESTIMONIAL ===== -->
+<!-- TESTIMONIAL -->
 
 <div class="testimonial">
 
@@ -1057,63 +824,20 @@ footer a {
   </div>
 
   <p>
-    "Tolle App! Ich habe bereits €120
-    verdient, nur durch Spiele, die
-    ich sowieso schon gespielt habe.
-    Die Auszahlung über PayPal
-    funktioniert einwandfrei."
+    "Great app! I've already made €120
+    just from games I've already played.
+    The payout via PayPal works perfectly."
   </p>
 
   <strong>
-    — Verifizierter Empfohlen-Nutzer
+    — Verified User
   </strong>
 
 </div>
 
-<!-- ===== BOTTOM CTA ===== -->
-
-<div class="bottom-cta">
-
-  <a
-    class="cta affiliate-link"
-    href="https://taprkr.com/r/eyJ0IjoiZW1wZm9obGVuIiwidGlkIjoiNTg3NGFjOThkZDg1MjQ1YjM1MWMiLCJ0cyI6MTc5MjgzOTgxNTc0N30"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-
-    <div class="cta-title">
-      🎁 Jetzt $10 Bonus freischalten →
-    </div>
-
-    <span class="cta-small">
-      Kostenlos starten • iOS &amp; Android
-    </span>
-
-  </a>
-
-  <div class="cta-note">
-    Nur für neue Konten • 2 Aufgaben erforderlich
-  </div>
-
-</div>
-
-<!-- ===== FOOTER ===== -->
-
-<footer>
-
-  <a href="#">Datenschutz</a>
-  <a href="#">Nutzungsbedingungen</a>
-
-  <p>
-    © 2026 Empfohlen.
-    Alle Rechte vorbehalten.
-  </p>
-
-</footer>
-
 </main>
 
-<!-- ===== TRACKING ===== -->
+<!-- AFFILIATE TRACKING -->
 
 <script>
 (function () {
@@ -1124,11 +848,11 @@ footer a {
 
   document
     .querySelectorAll(".affiliate-link")
-    .forEach(function (link) {
+    .forEach(function(link) {
 
       const url = new URL(link.href);
 
-      params.forEach(function (value, key) {
+      params.forEach(function(value, key) {
 
         if (!url.searchParams.has(key)) {
           url.searchParams.append(key, value);

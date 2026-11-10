@@ -1,113 +1,1147 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#060818">
-  <title>Altersbestätigung</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --red: #e0182e;
-      --text: #eef0f9;
-      --muted: #8a93ba;
-      --border: rgba(224,24,46,.18);
-    }
-    body {
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      background:
-        radial-gradient(circle at top center, rgba(224,24,46,.18), transparent 32%),
-        linear-gradient(180deg, #090b20 0%, #060818 40%, #04060f 100%);
-    }
-    .card {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      max-width: 440px;
-      padding: 42px 24px 30px;
-      text-align: center;
-      background: linear-gradient(180deg, rgba(22,26,66,.97), rgba(12,16,40,.97));
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: 0 22px 60px rgba(0,0,0,.45);
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at top right, rgba(224,24,46,.14), transparent 35%);
-    }
-    h1, p, .buttons { position: relative; z-index: 1; }
-    h1 {
-      font-size: clamp(32px, 8vw, 42px);
-      line-height: 1.08;
-      letter-spacing: -.04em;
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-    h1 span { color: #f5263e; }
-    .description {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 28px;
-    }
-    .buttons { display: grid; gap: 12px; }
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 62px;
-      padding: 15px 18px;
-      border-radius: 18px;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 900;
-      text-align: center;
-      transition: transform .15s ease, filter .15s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .btn:active { transform: scale(.98); }
-    .yes {
-      color: #fff;
-      background: linear-gradient(180deg, #f5263e 0%, #c0101e 100%);
-      box-shadow: 0 18px 40px rgba(224,24,46,.30), inset 0 1px 0 rgba(255,255,255,.16);
-    }
-    .yes:hover { filter: brightness(1.06); }
-    .no {
-      color: #eef0f9;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-    .no:hover { background: rgba(255,255,255,.09); }
-    @media (max-width: 360px) {
-      .card { padding: 34px 18px 26px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b1e">
+
+<title>$10 Willkommensbonus | Empfohlen</title>
+
+<meta name="description" content="Sichere dir deinen $10 Willkommensbonus und verdiene Geld mit Spielen und App-Tests.">
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #080a1b;
+  --card: #171935;
+  --red: #f23b42;
+  --text: #f7f7ff;
+  --muted: #aab4da;
+  --green: #57ef83;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(
+      ellipse at top,
+      #29172e 0%,
+      transparent 35%
+    ),
+    linear-gradient(180deg, #0c0d25, #050711);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 520px;
+  margin: auto;
+  padding: 14px 13px 35px;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 95% 5%,
+      #38203d,
+      transparent 45%
+    ),
+    linear-gradient(145deg, #19162f, #0c102b 70%);
+  border: 1px solid #4a2b4b;
+  border-radius: 25px;
+  padding: 23px 17px 20px;
+  box-shadow: 0 15px 45px #0007;
+  overflow: hidden;
+}
+
+.bonus-badge {
+  display: table;
+  margin: 0 auto 23px;
+  border: 1px solid #f34561;
+  background: #f23b4214;
+  color: #ff6677;
+  padding: 10px 17px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  box-shadow: 0 0 20px #f23b4215;
+}
+
+.headline {
+  text-align: center;
+  font-size: clamp(30px, 8vw, 43px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  font-weight: 900;
+}
+
+.headline .red {
+  color: #ff4752;
+}
+
+.headline .underlined {
+  text-decoration: underline;
+  text-decoration-color: #f23b42;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
+}
+
+/* ===== 3D GIFT ===== */
+
+.gift-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 225px;
+  margin: 12px auto 22px;
+  perspective: 700px;
+}
+
+.gift-3d {
+  position: relative;
+  width: 270px;
+  height: 210px;
+  flex-shrink: 0;
+  filter: drop-shadow(
+    0 18px 20px rgba(0,0,0,.35)
+  );
+}
+
+.gift-box {
+  position: absolute;
+  left: 32px;
+  top: 45px;
+  width: 165px;
+  height: 145px;
+  transform: rotate(-7deg);
+}
+
+.gift-body {
+  position: absolute;
+  left: 8px;
+  top: 42px;
+  width: 149px;
+  height: 100px;
+  border-radius: 7px 7px 18px 18px;
+  background: linear-gradient(
+    115deg,
+    #a90c1b 0%,
+    #fa4143 24%,
+    #e51c2c 62%,
+    #8c0719 100%
+  );
+  border: 2px solid #ff5c57;
+  box-shadow:
+    inset 8px 0 12px rgba(255,255,255,.15),
+    inset -13px -8px 20px rgba(50,0,0,.45),
+    7px 13px 20px rgba(0,0,0,.45);
+}
+
+.gift-ribbon {
+  position: absolute;
+  width: 32px;
+  height: 100%;
+  left: 57px;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    #bd710c,
+    #ffe67a 30%,
+    #ffba27 65%,
+    #a65b00
+  );
+  box-shadow:
+    inset 3px 0 5px #fff5a055,
+    3px 0 7px #0003;
+}
+
+.gift-lid {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 165px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(
+    110deg,
+    #b9091b,
+    #ff5652 28%,
+    #ed2732 65%,
+    #970b1b
+  );
+  border: 2px solid #ff6961;
+  box-shadow:
+    inset 0 5px 7px #ffffff35,
+    0 8px 10px #55000b70;
+  z-index: 3;
+}
+
+.lid-ribbon {
+  position: absolute;
+  left: 65px;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #b96b09,
+    #ffe680 40%,
+    #f7a81a 80%,
+    #a65c00
+  );
+}
+
+.gift-bow {
+  position: absolute;
+  top: -15px;
+  left: 52px;
+  width: 75px;
+  height: 55px;
+  z-index: 5;
+}
+
+.bow-left,
+.bow-right {
+  position: absolute;
+  width: 53px;
+  height: 35px;
+  border: 8px solid #ffbd2f;
+  border-radius: 75% 20% 75% 20%;
+  background: linear-gradient(
+    135deg,
+    #ffed8b,
+    #e28a00
+  );
+  box-shadow:
+    inset 0 2px 5px #fff7ae,
+    2px 5px 8px #6b330080;
+}
+
+.bow-left {
+  left: -20px;
+  top: 7px;
+  transform: rotate(35deg);
+}
+
+.bow-right {
+  right: -20px;
+  top: 7px;
+  transform: rotate(55deg) scaleX(-1);
+}
+
+.bow-center {
+  position: absolute;
+  left: 26px;
+  top: 22px;
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    #fff29c,
+    #f6a91e,
+    #b96700
+  );
+  box-shadow: 0 3px 6px #5d290070;
+  z-index: 6;
+}
+
+/* BONUS LABEL */
+
+.gift-bonus-label {
+  position: absolute;
+  left: 135px;
+  top: 95px;
+  width: 128px;
+  min-height: 92px;
+  background: linear-gradient(
+    140deg,
+    #fff0a6,
+    #ffc44f 60%,
+    #eaa12b
+  );
+  border: 2px solid #fff3ba;
+  border-radius: 15px;
+  transform: rotate(-11deg);
+  box-shadow:
+    0 10px 20px #0008,
+    inset 0 2px 6px #fff8d0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 8;
+  text-align: center;
+}
+
+.gift-bonus-amount {
+  font-size: 35px;
+  font-weight: 1000;
+  color: #52200c;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.gift-bonus-text {
+  font-size: 13px;
+  font-weight: 1000;
+  color: #51200a;
+  line-height: 1.05;
+  margin-top: 5px;
+}
+
+/* SPARKS */
+
+.gift-spark {
+  position: absolute;
+  width: 7px;
+  height: 25px;
+  border-radius: 10px;
+  background: linear-gradient(
+    #fff49a,
+    #ffae19
+  );
+  box-shadow: 0 0 12px #ffae1980;
+}
+
+.spark-1 {
+  left: 20px;
+  top: 40px;
+  transform: rotate(-40deg);
+}
+
+.spark-2 {
+  right: 10px;
+  top: 75px;
+  transform: rotate(45deg);
+}
+
+.spark-3 {
+  right: 0;
+  top: 115px;
+  transform: rotate(80deg);
+}
+
+/* ===== SUBTEXT ===== */
+
+.subtext {
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: center;
+  color: #c5cbed;
+  margin: 12px auto 17px;
+}
+
+.trust {
+  color: #b8c6ff;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.trust strong {
+  color: white;
+}
+
+.trust .check {
+  color: #73c7ff;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* ===== BENEFITS ===== */
+
+.proof-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.proof {
+  background: linear-gradient(
+    150deg,
+    #242441,
+    #15172f
+  );
+  border: 1px solid #383958;
+  border-radius: 16px;
+  text-align: center;
+  padding: 13px 5px;
+  min-width: 0;
+}
+
+.proof .emoji {
+  font-size: 19px;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.proof strong {
+  display: block;
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.proof span {
+  display: block;
+  font-size: 10px;
+  color: #b7c1e8;
+  line-height: 1.4;
+}
+
+/* ===== CTA ===== */
+
+.cta {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(
+    180deg,
+    #ff4847,
+    #c8201e
+  );
+  border: 1px solid #ff6260;
+  border-radius: 17px;
+  padding: 18px 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px #ef303b45;
+  transition:
+    transform .2s,
+    filter .2s;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.cta:active {
+  transform: scale(.98);
+}
+
+.cta-title {
+  font-size: clamp(15px, 4vw, 20px);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.cta-small {
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  color: #ffe4e4;
+  font-weight: 600;
+}
+
+.cta-note {
+  text-align: center;
+  font-size: 11px;
+  color: #b6bdd8;
+  margin: 13px auto 18px;
+  line-height: 1.5;
+}
+
+/* ===== PAYMENT ===== */
+
+.payment {
+  border: 1px solid #80304c;
+  border-radius: 16px;
+  padding: 14px;
+  background: linear-gradient(
+    135deg,
+    #241528,
+    #15132a
+  );
+  font-size: 12px;
+  line-height: 1.6;
+  color: #e0d8e8;
+}
+
+.payment strong {
+  color: white;
+}
+
+.payment .highlight {
+  color: #ff6878;
+  font-weight: 900;
+}
+
+/* ===== SECTION TITLES ===== */
+
+.section-title {
+  text-align: center;
+  color: #8998cd;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  margin: 28px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  max-width: 45px;
+  background: #48517c;
+}
+
+/* ===== GAME OFFERS ===== */
+
+.offer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(
+    120deg,
+    #111a29,
+    #09231c
+  );
+  border: 1.5px solid #59e766;
+  border-radius: 18px;
+  padding: 14px 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 20px #3bf56a12;
+}
+
+.game-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #26294c;
+  overflow: hidden;
+}
+
+.game-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.game-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.game-name {
+  font-size: 15px;
+  font-weight: 900;
+  color: white;
+}
+
+.hot {
+  background: linear-gradient(
+    90deg,
+    #ff5000,
+    #ff9200
+  );
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 9px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.game-desc {
+  font-size: 11px;
+  color: #abb8e6;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.game-price {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.game-price strong {
+  display: block;
+  font-size: 25px;
+  color: var(--green);
+  font-weight: 900;
+}
+
+.rating {
+  color: #ffd24f;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* ===== STEPS ===== */
+
+.steps {
+  background: linear-gradient(
+    150deg,
+    #191733,
+    #11132c
+  );
+  border: 1px solid #3a2952;
+  border-radius: 20px;
+  padding: 12px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1c1e3d;
+  border: 1px solid #303251;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 9px;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.number {
+  width: 39px;
+  height: 39px;
+  border-radius: 12px;
+  background: #3c203b;
+  color: #ff555d;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.step h3 {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.step p {
+  font-size: 11px;
+  color: #aebae7;
+  line-height: 1.5;
+}
+
+/* ===== TESTIMONIAL ===== */
+
+.testimonial {
+  background: linear-gradient(
+    130deg,
+    #191730,
+    #131730
+  );
+  border: 1px solid #68304e;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.stars {
+  color: #ffd23c;
+  letter-spacing: 2px;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 13px;
+  color: #e5e5f8;
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.testimonial strong {
+  font-size: 12px;
+}
+
+.bottom-cta {
+  margin-top: 22px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  color: #737c9d;
+  text-align: center;
+  padding: 23px 10px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+footer a {
+  color: #8e9ac2;
+  text-decoration: none;
+  margin: 0 7px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 360px) {
+
+  .page {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .hero {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .headline {
+    font-size: 29px;
+  }
+
+  .gift-area {
+    height: 195px;
+  }
+
+  .gift-3d {
+    transform: scale(.85);
+  }
+
+  .proof strong {
+    font-size: 12px;
+  }
+
+  .proof span {
+    font-size: 9px;
+  }
+
+  .game-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .game-price strong {
+    font-size: 21px;
+  }
+
+  .offer {
+    gap: 8px;
+    padding: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cta {
+    transition: none;
+  }
+}
+
+</style>
 </head>
+
 <body>
-  <main class="card">
-    <h1>Wie alt <span>bist du?</span></h1>
-    <p class="description">Bitte bestätige dein Alter, um fortzufahren.</p>
-    <div class="buttons">
-      <a class="btn yes" href="/home/">Ich bin 21 oder älter</a>
-      <a class="btn no" href="/home/">Ich bin unter 21</a>
+
+<main class="page">
+
+<!-- ===== HERO ===== -->
+
+<section class="hero">
+
+  <div class="bonus-badge">
+    🎁 $10 WILLKOMMENSBONUS
+  </div>
+
+  <h1 class="headline">
+    Sichere dir deinen
+    <span class="red">$10</span>
+    <span class="underlined">
+      Willkommensbonus
+    </span>
+    &amp; verdiene Geld mit Apps und Spielen
+  </h1>
+
+  <!-- ===== 3D GIFT ===== -->
+
+  <div class="gift-area">
+
+    <div class="gift-3d">
+
+      <div class="gift-spark spark-1"></div>
+      <div class="gift-spark spark-2"></div>
+      <div class="gift-spark spark-3"></div>
+
+      <div class="gift-box">
+
+        <div class="gift-lid">
+          <div class="lid-ribbon"></div>
+        </div>
+
+        <div class="gift-body">
+          <div class="gift-ribbon"></div>
+        </div>
+
+        <div class="gift-bow">
+          <div class="bow-left"></div>
+          <div class="bow-right"></div>
+          <div class="bow-center"></div>
+        </div>
+
+      </div>
+
+      <div class="gift-bonus-label">
+        <span class="gift-bonus-amount">
+          $10
+        </span>
+
+        <span class="gift-bonus-text">
+          WILLKOMMENS<br>
+          BONUS
+        </span>
+      </div>
+
     </div>
-  </main>
-  <script>
-    const query = window.location.search;
-    document.querySelectorAll('.buttons a').forEach(link => {
-      link.href = link.href + query;
+
+  </div>
+
+  <!-- ===== DESCRIPTION ===== -->
+
+  <p class="subtext">
+    Erledige <strong>2 kurze Aufgaben</strong>,
+    schalte deinen $10 Willkommensbonus frei
+    und erhalte Zugang zu bezahlten Spielen,
+    App-Tests und Scroll-Aufgaben.
+  </p>
+
+  <div class="trust">
+    <span class="check">✓</span>
+    Bereits über <strong>$50M+</strong>
+    an Nutzer ausgezahlt
+  </div>
+
+  <!-- ===== BENEFITS ===== -->
+
+  <div class="proof-row">
+
+    <div class="proof">
+      <span class="emoji">🎁</span>
+      <strong>$10</strong>
+      <span>
+        Willkommensbonus für neue Konten
+      </span>
+    </div>
+
+    <div class="proof">
+      <span class="emoji">⚡</span>
+      <strong>2 Schritte</strong>
+      <span>
+        zum Freischalten
+      </span>
+    </div>
+
+    <div class="proof">
+      <span class="emoji">📱</span>
+      <strong>iOS + Android</strong>
+      <span>
+        Für beide Geräte
+      </span>
+    </div>
+
+  </div>
+
+  <!-- ===== MAIN CTA ===== -->
+
+  <a
+    class="cta affiliate-link"
+    href="https://taprkr.com/r/eyJ0IjoiZW1wZm9obGVuIiwidGlkIjoiNTg3NGFjOThkZDg1MjQ1YjM1MWMiLCJ0cyI6MTc5MjgzOTgxNTc0N30"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+
+    <div class="cta-title">
+      🎁 $10 Willkommensbonus freischalten →
+    </div>
+
+    <span class="cta-small">
+      Kostenlose Registrierung • iOS &amp; Android
+    </span>
+
+  </a>
+
+  <div class="cta-note">
+    🛡️ Nur für neue Konten.
+    Erledige 2 kurze Aufgaben,
+    um den $10 Bonus zu erhalten.
+  </div>
+
+  <!-- ===== PAYMENT ===== -->
+
+  <div class="payment">
+
+    <strong>
+      Wie funktioniert die Bezahlung?
+    </strong>
+
+    <span class="highlight">
+      Empfohlen:
+    </span>
+
+    PayPal für Auszahlungen ab $70.
+    Verdiene Geld durch abgeschlossene
+    Aufgaben, App-Tests und Spiele.
+
+  </div>
+
+</section>
+
+<!-- ===== GAME OFFERS ===== -->
+
+<div class="section-title">
+  SPIELE, MIT DENEN DU VERDIENEN KANNST
+</div>
+
+<!-- BLOCK BLAST -->
+
+<div class="offer">
+
+  <div class="game-icon">
+
+    <img
+      src="block-blast.webp"
+      alt="Block Blast"
+      width="54"
+      height="54"
+      loading="lazy"
+    >
+
+  </div>
+
+  <div class="game-info">
+
+    <div class="game-name">
+      Block Blast
+      <span class="hot">HOT</span>
+    </div>
+
+    <div class="game-desc">
+      Teste das Spiel und erreiche Level 7
+    </div>
+
+  </div>
+
+  <div class="game-price">
+    <strong>€106</strong>
+    <div class="rating">
+      ★ 5.0
+    </div>
+  </div>
+
+</div>
+
+<!-- SUBWAY SURFERS -->
+
+<div class="offer">
+
+  <div class="game-icon">
+
+    <img
+      src="subway-surfers.webp"
+      alt="Subway Surfers"
+      width="54"
+      height="54"
+      loading="lazy"
+    >
+
+  </div>
+
+  <div class="game-info">
+
+    <div class="game-name">
+      Subway Surfers
+    </div>
+
+    <div class="game-desc">
+      Teste das Spiel und erreiche Level 5
+    </div>
+
+  </div>
+
+  <div class="game-price">
+    <strong>€20</strong>
+  </div>
+
+</div>
+
+<!-- ===== HOW IT WORKS ===== -->
+
+<div class="section-title">
+  IN 3 EINFACHEN SCHRITTEN STARTEN
+</div>
+
+<div class="steps">
+
+  <div class="step">
+
+    <div class="number">1</div>
+
+    <div>
+      <h3>Willkommensbonus freischalten</h3>
+      <p>
+        Erstelle über diese Seite
+        ein neues Empfohlen-Konto.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="step">
+
+    <div class="number">2</div>
+
+    <div>
+      <h3>2 kurze Aufgaben erledigen</h3>
+      <p>
+        Schließe die ersten einfachen
+        Aktionen ab, um deine Angebote
+        freizuschalten.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="step">
+
+    <div class="number">3</div>
+
+    <div>
+      <h3>Spielen &amp; Geld verdienen</h3>
+      <p>
+        Starte mit Spielen, App-Tests
+        und weiteren bezahlten Aufgaben.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===== TESTIMONIAL ===== -->
+
+<div class="testimonial">
+
+  <div class="stars">
+    ★★★★★
+  </div>
+
+  <p>
+    "Tolle App! Ich habe bereits €120
+    verdient, nur durch Spiele, die
+    ich sowieso schon gespielt habe.
+    Die Auszahlung über PayPal
+    funktioniert einwandfrei."
+  </p>
+
+  <strong>
+    — Verifizierter Empfohlen-Nutzer
+  </strong>
+
+</div>
+
+<!-- ===== BOTTOM CTA ===== -->
+
+<div class="bottom-cta">
+
+  <a
+    class="cta affiliate-link"
+    href="https://taprkr.com/r/eyJ0IjoiZW1wZm9obGVuIiwidGlkIjoiNTg3NGFjOThkZDg1MjQ1YjM1MWMiLCJ0cyI6MTc5MjgzOTgxNTc0N30"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+
+    <div class="cta-title">
+      🎁 Jetzt $10 Bonus freischalten →
+    </div>
+
+    <span class="cta-small">
+      Kostenlos starten • iOS &amp; Android
+    </span>
+
+  </a>
+
+  <div class="cta-note">
+    Nur für neue Konten • 2 Aufgaben erforderlich
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+  <a href="#">Datenschutz</a>
+  <a href="#">Nutzungsbedingungen</a>
+
+  <p>
+    © 2026 Empfohlen.
+    Alle Rechte vorbehalten.
+  </p>
+
+</footer>
+
+</main>
+
+<!-- ===== TRACKING ===== -->
+
+<script>
+(function () {
+
+  const params = new URLSearchParams(
+    window.location.search
+  );
+
+  document
+    .querySelectorAll(".affiliate-link")
+    .forEach(function (link) {
+
+      const url = new URL(link.href);
+
+      params.forEach(function (value, key) {
+
+        if (!url.searchParams.has(key)) {
+          url.searchParams.append(key, value);
+        }
+
+      });
+
+      link.href = url.toString();
+
     });
-  </script>
+
+})();
+</script>
+
 </body>
 </html>
